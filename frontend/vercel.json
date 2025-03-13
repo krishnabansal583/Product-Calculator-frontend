@@ -1,8 +1,9 @@
 {
-    "routes": [
-      {
-        "src": "/.*",
-        "dest": "/index.html"
-      }
-    ]
-  }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)\\.js", "dest": "/$1.js" },
+    { "src": "/(.*)\\.css", "dest": "/$1.css" },
+    { "src": "/(.*)\\.map", "dest": "/$1.map" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
