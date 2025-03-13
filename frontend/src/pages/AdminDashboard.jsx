@@ -51,7 +51,7 @@ const AdminDashboard = () => {
 
   const fetchAllProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/admin/get-all-products');
+      const response = await axios.get('https://backend-1-2nnq.onrender.com/api/admin/get-all-products');
       setProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -60,7 +60,7 @@ const AdminDashboard = () => {
 
   const fetchProductById = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/admin/get-product/${id}`);
+      const response = await axios.get(`https://backend-1-2nnq.onrender.com/api/admin/get-product/${id}`);
       setSelectedProduct(response.data);
       setEditFormData(response.data);
     } catch (error) {
@@ -70,7 +70,7 @@ const AdminDashboard = () => {
 
   const handleEditProduct = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/admin/update-product/${id}`, editFormData);
+      await axios.put(`https://backend-1-2nnq.onrender.com/api/admin/update-product/${id}`, editFormData);
       alert('Product updated successfully!');
       fetchAllProducts();
       setSelectedProduct(null);
@@ -81,7 +81,7 @@ const AdminDashboard = () => {
 
   const handleDeleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/delete-product/${id}`);
+      await axios.delete(`https://backend-1-2nnq.onrender.com/api/admin/delete-product/${id}`);
       alert('Product deleted successfully!');
       fetchAllProducts();
     } catch (error) {
@@ -102,7 +102,7 @@ const AdminDashboard = () => {
   const handleCreateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/admin/add-product', createFormData);
+      await axios.post('https://backend-1-2nnq.onrender.com/api/admin/add-product', createFormData);
       alert('Product added successfully!');
       fetchAllProducts();
       setCreateFormData({
@@ -141,7 +141,7 @@ const AdminDashboard = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/add-products-from-file', formData, {
+      const response = await axios.post('https://backend-1-2nnq.onrender.com/api/admin/add-products-from-file', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -17,7 +17,7 @@ const Products = () => {
   const fetchAllProducts = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/api/admin/get-all-products');
+      const response = await axios.get('https://backend-1-2nnq.onrender.com/api/admin/get-all-products');
       setProducts(response.data);
       setLoading(false);
     } catch (error) {

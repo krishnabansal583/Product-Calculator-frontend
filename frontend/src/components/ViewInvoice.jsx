@@ -30,7 +30,7 @@ const ViewInvoice = () => {
 
         // Updated endpoint to match the server.js route configuration
         const res = await axios.get(
-          `http://localhost:5000/api/admin/invoices/by-number/${invoiceId}`,
+          `https://backend-1-2nnq.onrender.com/api/admin/invoices/by-number/${invoiceId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

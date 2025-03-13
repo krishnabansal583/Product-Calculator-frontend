@@ -31,10 +31,10 @@ const GenerateInvoice = () => {
       setLoading(true);
       try {
         const usersResponse = await axios.get(
-          "http://localhost:5000/api/admin/get-all-users"
+          "https://backend-1-2nnq.onrender.com/api/admin/get-all-users"
         );
         const productsResponse = await axios.get(
-          "http://localhost:5000/api/admin/get-all-products"
+          "https://backend-1-2nnq.onrender.com/api/admin/get-all-products"
         );
 
         setUsers(usersResponse.data);
@@ -183,7 +183,7 @@ const GenerateInvoice = () => {
       
       // Send notification to server with proper authorization header
       await axios.post(
-        "http://localhost:5000/api/notifications/create",
+        "https://backend-1-2nnq.onrender.comhttps://backend-1-2nnq.onrender./api/notifications/create",
         notification,
         {
           headers: {
@@ -240,7 +240,7 @@ const GenerateInvoice = () => {
     
     // Send invoice to server with proper authorization header
     const response = await axios.post(
-      "http://localhost:5000/api/admin/invoices",
+      "https://backend-1-2nnq.onrender.comhttps://backend-1-2nnq.onrender./api/admin/invoices",
       formattedInvoice,
       {
         headers: {
@@ -311,7 +311,7 @@ const handleGenerateInvoice = async () => {
     });
 
     const response = await axios.post(
-      "http://localhost:5000/api/admin/generate-invoice",
+      "https://backend-1-2nnq.onrender.com/api/admin/generate-invoice",
       {
         userId,
         products: productsWithCalculatedTax,

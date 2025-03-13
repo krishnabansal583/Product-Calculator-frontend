@@ -28,7 +28,7 @@ const Dashboard = () => {
         }
 
         const res = await axios.get(
-          `http://localhost:5000/api/admin/user-state/${userId}`,
+          `https://backend-1-2nnq.onrender.com/api/admin/user-state/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -43,7 +43,7 @@ const Dashboard = () => {
     const fetchProducts = async () => {
       setIsLoading(true);
       try {
-        const res = await axios.get("http://localhost:5000/api/products", {
+        const res = await axios.get("https://backend-1-2nnq.onrender.com/api/products", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setProducts(res.data);
@@ -60,7 +60,7 @@ const Dashboard = () => {
         if (!userId) return;
 
         const res = await axios.get(
-          `http://localhost:5000/api/notifications/user/${userId}`,
+          `https://backend-1-2nnq.onrender.com/api/notifications/user/${userId}`,
           {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }
@@ -242,7 +242,7 @@ const Dashboard = () => {
 
       // Call API to mark notifications as read
       await axios.put(
-        `http://localhost:5000/api/notifications/mark-read/${userId}`,
+        `https://backend-1-2nnq.onrender.com/api/notifications/mark-read/${userId}`,
         {},
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

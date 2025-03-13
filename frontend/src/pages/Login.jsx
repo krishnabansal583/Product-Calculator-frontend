@@ -49,7 +49,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const response = await axios.post('https://backend-1-2nnq.onrender.com/api/auth/login', formData);
 
       // Store token and user info in localStorage
       localStorage.setItem('token', response.data.token);

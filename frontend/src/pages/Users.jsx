@@ -17,7 +17,7 @@ const Users = () => {
   const fetchAllUsers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/api/admin/get-all-users');
+      const response = await axios.get('https://backend-1-2nnq.onrender.com/api/admin/get-all-users');
       setUsers(response.data);
     } catch (error) {
       console.error('Error fetching users:', error);
@@ -28,7 +28,7 @@ const Users = () => {
 
   const handleApproveUser = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/admin/approve-user/${id}`);
+      await axios.put(`https://backend-1-2nnq.onrender.com/api/admin/approve-user/${id}`);
       alert('User approved successfully!');
       fetchAllUsers();
     } catch (error) {

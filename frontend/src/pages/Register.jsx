@@ -83,7 +83,7 @@ const Register = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post('https://backend-1-2nnq.onrender.com/api/auth/register', formData);
       
       // Optional: Show success message before navigating
       alert('Registration successful!');
