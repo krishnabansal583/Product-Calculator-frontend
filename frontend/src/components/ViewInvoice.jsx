@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import './ViewInvoice.css';
+import './viewInvoice.css';
 
 const ViewInvoice = () => {
   const { invoiceId } = useParams();
