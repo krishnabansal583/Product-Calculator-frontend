@@ -1,0 +1,215 @@
+
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0a3232;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .register-container {
+    background: rgba(239, 242, 239, 0.9);
+        padding: 30px 40px; 
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border-top: 3px solid #a0e8a0;
+  }
+  
+  .register-container h1 {
+    color: #0a3232;
+    margin-bottom: 20px; 
+    font-size: 24px; 
+    font-weight: 600;
+    position: relative;
+  }
+
+  .register-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #a0e8a0;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .register-form input,
+.state-dropdown {
+  padding: 10px ;
+  border-radius: 8px;
+  border: 1px solid #cfddd1;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+  
+ 
+.register-form input:focus,
+.state-dropdown:focus {
+  border-color: #0a3232;
+  box-shadow: 0 0 0 2px rgba(10, 50, 50, 0.1);
+}
+.register-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #0a3232;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+  
+.register-form button:disabled {
+  background-color: #a8a8a8;
+  cursor: not-allowed;
+}
+  
+.register-form button:hover:not(:disabled) {
+  background-color: #0d4545;
+  transform: translateY(-2px);
+}
+  
+ 
+.login-link {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0a3232;
+}
+  
+.login-link a {
+  color: #0a3232;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.login-link a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #a0e8a0;
+  transition: width 0.3s ease;
+}
+  
+  .login-link a:hover {
+  color: #0d4545;
+}
+  
+
+.login-link a:hover::after {
+  width: 100%;
+}
+  
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: 8px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 20px 15px;
+  }
+  
+  .register-container h1 {
+    font-size: 22px;
+  }
+  
+  .register-form input,
+  .state-dropdown,
+  .register-form button {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+  .error-message {
+    font-size: 13px;
+    padding: 6px;
+  }
+  
+  .register-form {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .register-container {
+    padding: 15px 10px;
+  }
+  
+  .register-container h1 {
+    font-size: 20px;
+  }
+  
+  .register-form input,
+  .state-dropdown {
+    padding: 8px;
+    font-size: 13px;
+  }
+  
+  .register-form button {
+    font-size: 14px;
+  }
+  
+  .login-link {
+    font-size: 13px;
+  }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .register-container {
+    max-width: 550px;
+    padding: 30px 35px;
+  }
+  
+  .register-container h1 {
+    font-size: 26px;
+  }
+  
+  .register-form input,
+  .state-dropdown,
+  .register-form button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* For landscape orientation on smaller devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .register-page {
+    padding: 10px;
+  }
+  
+  .register-container {
+    padding: 15px;
+  }
+  
+  .register-form {
+    gap: 8px;
+  }
+}
